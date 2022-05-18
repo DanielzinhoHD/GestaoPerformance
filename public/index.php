@@ -7,4 +7,8 @@ require_once("../src/vendor/autoload.php");
 use App\teste;
 
 // $teste = new teste();
-echo DIRPAGE;
+// echo DIRPAGE;
+
+$con = new App\Model\ClassConexao();
+
+var_dump($con->conexaoDB());

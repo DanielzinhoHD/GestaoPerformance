@@ -19,6 +19,6 @@ define('DIRADM', DIRPAGE."public/adm");
 
 #Acesso ao banco de dados;
 define('HOST', "localhost");
-define('DB', "sistema");
+define('DB', "smartfast");
 define('USER', "root");
-define('PASS', "");
+define('PW', "");
