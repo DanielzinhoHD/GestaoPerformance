@@ -2,13 +2,14 @@
 
 #Arquivos diretórios raízes;
 
-$PastaInterna= 'GestaoPerformance/';
+// $PastaInterna= 'GestaoPerformance/';
+$PastaInterna='GestaoPerformance/';
 define('DIRPAGE', "https://{$_SERVER['HTTP_HOST']}/{$PastaInterna}");
 
 if(substr($_SERVER['DOCUMENT_ROOT'], -1) == '/'){
-  define('DIRREQ', "https://{$_SERVER['DOCUMENT_ROOT']}{$PastaInterna}");
+  define('DIRREQ', "{$_SERVER['DOCUMENT_ROOT']}{$PastaInterna}");
 }else{
-  define('DIRREQ', "https://{$_SERVER['DOCUMENT_ROOT']}/{$PastaInterna}");
+  define('DIRREQ', "{$_SERVER['DOCUMENT_ROOT']}/{$PastaInterna}");
 }
 
 #DIretórios Específicos;

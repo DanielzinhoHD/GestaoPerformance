@@ -14,7 +14,7 @@ class ClassRoutes{
   public function getRota(){
     $url=$this->parseUrl();
     $i=$url[0];
-
+    // return $i;
     $this->Rota=array(
       ""=>"ControllerHome",
       "home"=>"ControllerHome",
@@ -22,16 +22,16 @@ class ClassRoutes{
     );
 
     if(array_key_exists($i, $this->Rota)){
+
       if(file_exists(DIRREQ."app/controller/{$this->Rota[$i]}.php")){
         return $this->Rota[$i];
       }else{
-        // return "ControllerHome";
-        return 'file não existe';
-        // return DIRREQ."app/controller/{$this->Rota[$i]}.php";
+        return "ControllerHome";
+        // return 'file não existe';
       }
     }else{
-      // return "ControllerHome";
-      return 'rota não existe';
+      return "ControllerHome";
+      // return 'rota não existe';
     }
   }
 
