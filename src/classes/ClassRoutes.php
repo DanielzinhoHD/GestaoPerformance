@@ -25,10 +25,13 @@ class ClassRoutes{
       if(file_exists(DIRREQ."app/controller/{$this->Rota[$i]}.php")){
         return $this->Rota[$i];
       }else{
-        return "ControllerHome";
+        // return "ControllerHome";
+        return 'file não existe';
+        // return DIRREQ."app/controller/{$this->Rota[$i]}.php";
       }
     }else{
-      return "ControllerHome";
+      // return "ControllerHome";
+      return 'rota não existe';
     }
   }
 

@@ -2,7 +2,7 @@
 
 #Arquivos diretórios raízes;
 
-$PastaInterna= '';
+$PastaInterna= 'GestaoPerformance/';
 define('DIRPAGE', "https://{$_SERVER['HTTP_HOST']}/{$PastaInterna}");
 
 if(substr($_SERVER['DOCUMENT_ROOT'], -1) == '/'){
