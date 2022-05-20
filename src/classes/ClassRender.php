@@ -27,22 +27,36 @@ class classRender{
     include_once(DIRREQ.'app/view/layout.php');
   }
 
+// Add características expecíficas no main;
+  public function addHeader()
+  {
+    if(file_exists(DIRREQ."app/view/{$this->getDir()}/header.php")){
+      include(DIRREQ."app/view/{$this->getDir()}/header.php");
+    };
+  }
+
 // Add características expecíficas no head;
   public function addHead()
   {
-    if(file_exists(DIRREQ."app/view/{$this->getDir()}/main.php"));
+    if(file_exists(DIRREQ."app/view/{$this->getDir()}/head.php")){
+      include(DIRREQ."app/view/{$this->getDir()}/head.php");
+    };
   }
 
 // Add características expecíficas no main;
   public function addMain()
   {
-
+    if(file_exists(DIRREQ."app/view/{$this->getDir()}/main.php")){
+      include(DIRREQ."app/view/{$this->getDir()}/main.php");
+    };
   }
 
 // Add características expecíficas no footer;
 public function addFooter()
   {
-
+    if(file_exists(DIRREQ."app/view/{$this->getDir()}/footer.php")){
+      include(DIRREQ."app/view/{$this->getDir()}/footer.php");
+    };
   }
 
 }

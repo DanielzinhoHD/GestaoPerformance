@@ -8,8 +8,21 @@
   <meta name="keywords" content="<?php echo $this->getKeywords();?>">
   <title><?php echo $this->getTitle();?></title>
   <meta rel="stylesheet" href="<?php echo DIRCSS.'layout.css'?>">
+
+  <?php echo $this->addHead();?>
 </head>
 <body>
+  <header>
+    <?php echo $this->addHeader();?>
+  </header>
+
+  <div class="main">
+    <?php echo $this->addMain();?>
+  </div>
   
+  <footer>
+    <?php echo $this->addFooter();?>
+  </footer>
+
 </body>
 </html>
