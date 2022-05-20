@@ -30,7 +30,7 @@ class classRender{
 // Add características expecíficas no head;
   public function addHead()
   {
-
+    if(file_exists(DIRREQ."app/view/{$this->getDir()}/main.php"));
   }
 
 // Add características expecíficas no main;

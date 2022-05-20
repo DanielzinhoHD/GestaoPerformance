@@ -4,8 +4,12 @@ header("Content-Type: text/html; charset=utf-8");
 require_once("../config/config.php");
 require_once("../src/vendor/autoload.php");
 
+// include(DIRREQ."app/view/layout.php");
+
 // use App\teste;
 use Src\Classes\ClassRoutes;
+
+$dispatch = new App\Dispatch();
 
 // $teste = new teste();
 // echo DIRPAGE;
@@ -14,13 +18,3 @@ use Src\Classes\ClassRoutes;
 
 // var_dump($con->conexaoDB());
 
-class Teste extends ClassRoutes{
-
-  public function __construct()
-  {
-    $a = $this->getRota();
-    var_dump($a);
-  }
-}
-
-$teste = new Teste();
