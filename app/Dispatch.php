@@ -36,8 +36,8 @@ class Dispatch extends ClassRoutes{
 
     private function addMethod()
     {
-        if(method_exists(this->Obj, $this->parseURL () [1])){
-            $this->setMethod("{$this->parseUrl ()[1]}");
+        if(method_exists($this->Obj, $this->parseURL()[1])){
+            $this->setMethod("{$this->parseUrl()[1]}");
             self::addParam();
             call_user_func_array([$this->Obj,$this->getMethod()],$this->getParam());
         }
