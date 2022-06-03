@@ -4,6 +4,7 @@ namespace App\Controller;
 use Src\Classes\classRender;
 use Src\Interfaces\InterfaceView;
 use App\Model\ClassCadastro;
+use Src\Classes\ClassRoutes;
 
 class ControllerCadastro extends ClassCadastro{
 
@@ -35,13 +36,9 @@ class ControllerCadastro extends ClassCadastro{
     }else{
       if(file_exists(DIRREQ."app/controller/ControllerHome.php")){
       // Essa maneira deixa a URL desatualizada, se possível consertar no futuro;
-        $Render = new classRender;
-        $Render->setDescription("Página de cadastro");
-        $Render->setKeywords("cabeamento,smartfast,performance");
-        $Render->setTitle("Smartfast Cadastro");
-        $Render->setDir("home/");
-        $Render->renderLayout();
-        exit();
+      // (não direciona, apenas renderiza a página que deveria ser redirecionada e a url continua antiga);
+        $Home = new ControllerHome;
+        return $Home;
       }
     }
     
