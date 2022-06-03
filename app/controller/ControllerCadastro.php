@@ -105,13 +105,13 @@ class ControllerCadastro extends ClassCadastro{
       $this->projeto, 
       $this->obs
     );
+    
   }
-
   #puxando dados do DB
 
   public function puxaDB()
   {
-      $this->recVariaveis();
+      $this->receberVariaveis();
       $B=$this->selecionaClientes($this->Nome, $this->Sexo, $this->Cidade);
 
       foreach($B as $C) {
@@ -128,7 +128,7 @@ class ControllerCadastro extends ClassCadastro{
 
   public function atualizar()
   {
-      $this->recVariaveis();
+      $this->receberVariaveis();
       $this->atualizarClientes($this->Id, $this->Nome, $this->Sexo, $this->Cidade);
 
       echo "Usuário Atualizado com Sucesso!";
