@@ -106,6 +106,37 @@ class ControllerCadastro extends ClassCadastro{
     );
     
   }
+
+
+  #Selecionar e exibir os dados do banco  de dados
+  public function seleciona()
+  {
+      $this->receberVariaveis();
+      $this->selecionaClientes($this->Nome, $this->Sexo, $this->Cidade);
+      echo "
+        <table border='1'>
+            <tr>
+                <td>Nome</td>
+                <td>Sexo</td>
+                <td>Cidade</td>
+            </tr>
+            ";
+                foreach($B as $C){
+                    echo "
+                    <table border='1'>
+                        <tr>
+                            <td>$C[Nome]</td>
+                            <td>$C[Sexo]</td>
+                            <td>$C[Cidade]</td>
+                        </tr>
+                        ";
+        echo"
+            </table> 
+        ";
+                }
+  }
+
+
   #puxando dados do DB
 
   public function puxaDB()
