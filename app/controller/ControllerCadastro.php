@@ -39,6 +39,7 @@ class ControllerCadastro extends ClassCadastro{
       if(file_exists(DIRREQ."app/controller/ControllerHome.php")){
       // Redireciona o usuário pra tela home (alterar para tela de login);
         header("Location: ".DIRPAGE.'home');
+        exit();
       }
     }
     
