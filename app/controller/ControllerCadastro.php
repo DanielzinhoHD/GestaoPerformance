@@ -37,10 +37,8 @@ class ControllerCadastro extends ClassCadastro{
       $Render->renderLayout();
     }else{
       if(file_exists(DIRREQ."app/controller/ControllerHome.php")){
-      // Essa maneira deixa a URL desatualizada, se possível consertar no futuro;
-      // (não direciona, apenas renderiza a página que deveria ser redirecionada e a url continua antiga);
-        $Home = new ControllerHome;
-        return $Home;
+      // Redireciona o usuário pra tela home (alterar para tela de login);
+        header("Location: ".DIRPAGE.'home');
       }
     }
     
