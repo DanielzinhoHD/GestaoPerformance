@@ -6,6 +6,7 @@ namespace App\Controller;
 use Src\Classes\classRender;
 use Src\Interfaces\InterfaceView;
 use App\Model\ClassCadastro;
+use Src\Classes\ClassRoutes;
 
 class ControllerCadastro extends ClassCadastro{
 
@@ -36,13 +37,8 @@ class ControllerCadastro extends ClassCadastro{
       $Render->renderLayout();
     }else{
       if(file_exists(DIRREQ."app/controller/ControllerHome.php")){
-      // Essa maneira deixa a URL desatualizada, se possível consertar no futuro;
-        $Render = new classRender;
-        $Render->setDescription("Página de cadastro");
-        $Render->setKeywords("cabeamento,smartfast,performance");
-        $Render->setTitle("Smartfast Cadastro");
-        $Render->setDir("home/");
-        $Render->renderLayout();
+      // Redireciona o usuário pra tela home (alterar para tela de login);
+        header("Location: ".DIRPAGE.'home');
         exit();
       }
     }
@@ -108,12 +104,14 @@ class ControllerCadastro extends ClassCadastro{
       $this->projeto, 
       $this->obs
     );
+    
   }
+
 
   #Selecionar e exibir os dados do banco  de dados
   public function seleciona()
   {
-      $this->recVariaveis();
+      $this->receberVariaveis();
       $this->selecionaClientes($this->Nome, $this->Sexo, $this->Cidade);
       echo "
         <table border='1'>
@@ -138,11 +136,12 @@ class ControllerCadastro extends ClassCadastro{
                 }
   }
 
+
   #puxando dados do DB
 
   public function puxaDB()
   {
-      $this->recVariaveis();
+      $this->receberVariaveis();
       $B=$this->selecionaClientes($this->Nome, $this->Sexo, $this->Cidade);
 
       foreach($B as $C) {
@@ -159,7 +158,7 @@ class ControllerCadastro extends ClassCadastro{
 
   public function atualizar()
   {
-      $this->recVariaveis();
+      $this->receberVariaveis();
       $this->atualizarClientes($this->Id, $this->Nome, $this->Sexo, $this->Cidade);
 
       echo "Usuário Atualizado com Sucesso!";
