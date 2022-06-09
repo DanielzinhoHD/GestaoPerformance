@@ -15,9 +15,9 @@
     <?php echo $this->addHeader();?>
   </header>
 
-
+  <div class="main">
     <?php echo $this->addMain();?>
-
+  </div>
   
   <footer>
     <?php echo $this->addFooter();?>
