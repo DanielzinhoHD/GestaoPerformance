@@ -13,10 +13,10 @@ if(substr($_SERVER['DOCUMENT_ROOT'], -1) == '/'){
 }
 
 #DIretórios Específicos;
-define('DIRIMG', DIRPAGE."public/img");
-define('DIRCSS', DIRPAGE."public/css");
-define('DIRJS', DIRPAGE."public/js");
-define('DIRADM', DIRPAGE."public/adm");
+define('DIRIMG', DIRPAGE."public/img/");
+define('DIRCSS', DIRPAGE."public/css/");
+define('DIRJS', DIRPAGE."public/js/");
+define('DIRADM', DIRPAGE."public/adm/");
 
 #Acesso ao banco de dados;
 define('HOST', "localhost");
