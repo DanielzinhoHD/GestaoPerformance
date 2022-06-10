@@ -18,27 +18,37 @@ class ControllerLogin extends ClassLogin{
       if(file_exists(DIRREQ."app/controller/ControllerHome.php")){
       // Redireciona usuário pra tela inicial se já estiver logado;
         header("Location: ".DIRPAGE);
-          exit();
+        exit();
       }else{
         echo 'Você já está logado!';
       }
-    }else{
-      $Render = new classRender;
-      $Render->setDescription("Página de login");
-      $Render->setKeywords("cabeamento,smartfast,performance");
-      $Render->setTitle("Smartfast Login");
-      $Render->setDir("login/");
-      $Render->renderLayout();
+    }
+    else{
+      if(isset($_POST['submit'])){
+        $Render = new classRender;
+        $Render->setDescription("Página de login");
+        $Render->setKeywords("cabeamento,smartfast,performance");
+        $Render->setTitle("Smartfast Login");
+        $Render->setDir("login/");
+        $Render->renderLayout();
+      }
     }
   }
 
   public function receberVariaveis()
   {
-    if(isset($_POST['name'])){
-      $this->name=filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+    $error_msg = '<p class="error-msg">Você precisa preencher todos os campos!<p>';
+
+    if(isset($_POST['email'])){
+      $this->email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+    }else{
+      return $error_msg;
     }
+
     if(isset($_POST['pw'])){
       $this->pw=filter_input(INPUT_POST, 'pw', FILTER_SANITIZE_SPECIAL_CHARS);
+    }else{
+      return $error_msg;
     }
   }
 

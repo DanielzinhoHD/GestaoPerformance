@@ -19,12 +19,7 @@ class ClassLogin extends ClassConexao{
     $result = $stmt->fetch(\PDO::FETCH_ASSOC);
     $stmt = null;
     
-  // Testar se is_array retorna o usuario ou false de maneira certa;
-    if(is_array($result)){
-      return $result;
-    }else{
-      return false;
-    }
+    return $result;
   }
 
 // Função para login;

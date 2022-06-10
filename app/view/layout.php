@@ -6,6 +6,11 @@
   <meta name="description" content="<?php echo $this->getDescription();?>">
   <meta name="keywords" content="<?php echo $this->getKeywords();?>">
   <title><?php echo $this->getTitle();?></title>
+  <!-- importing jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous">
+  </script> 
   <link rel="stylesheet" href="<?php echo DIRCSS.'default.css'?>">
 
   <?php echo $this->addHead();?>
