@@ -28,5 +28,6 @@
     <?php echo $this->addFooter();?>
   </footer>
 
+  <?php echo $this->addScript();?>
 </body>
 </html>

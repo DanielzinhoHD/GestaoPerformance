@@ -2,10 +2,9 @@
 
 namespace App\Controller;
 use Src\Classes\classRender;
-use Src\Interfaces\InterfaceView;
 use App\Model\ClassLogin;
 
-session_start();
+// session_start();
 
 class ControllerLogin extends ClassLogin{
 
@@ -14,7 +13,11 @@ class ControllerLogin extends ClassLogin{
 
   public function __construct()
   {
-    if(isset($_SESSION['userId'])){
+    if(isset($_POST['submit'])){
+      $isSubmitted = $_POST['submit'];
+    }
+
+    if(isset($_SESSION['id'])){
       if(file_exists(DIRREQ."app/controller/ControllerHome.php")){
       // Redireciona usuário pra tela inicial se já estiver logado;
         header("Location: ".DIRPAGE);
@@ -24,7 +27,7 @@ class ControllerLogin extends ClassLogin{
       }
     }
     else{
-      if(isset($_POST['submit'])){
+      if(!isset($isSubmitted)){
         $Render = new classRender;
         $Render->setDescription("Página de login");
         $Render->setKeywords("cabeamento,smartfast,performance");
@@ -49,6 +52,11 @@ class ControllerLogin extends ClassLogin{
       $this->pw=filter_input(INPUT_POST, 'pw', FILTER_SANITIZE_SPECIAL_CHARS);
     }else{
       return $error_msg;
+    }
+
+    if(isset($_POST['submit'])){
+      $submit = $_POST['submit'];
+      $this->isSubmitted=filter_input(INPUT_POST, 'submit', FILTER_SANITIZE_SPECIAL_CHARS);
     }
   }
 

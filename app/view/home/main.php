@@ -1,6 +1,13 @@
 <nav class="navbar navbar-light bg-light shadow">
   <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">SMARTFAST</span>
+    <span class="navbar-brand mb-0 h1"><?php 
+    $title = 'SMARTFAST';
+    if(isset($_SESSION['name'])){
+      echo $title.' - '.ucfirst($_SESSION['name']);
+    }else{
+      echo $title;
+    }
+    ?></span>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <span class="navbar-toggler-icon"></span>
@@ -28,7 +35,12 @@
               grid_view </span> RELATÓRIOS</li>
           <li class="list-group-item"> <span class="material-icons">
               description
-            </span>PROJETOS </li>
+          </span>PROJETOS </li>
+          <?php
+        // Creates a button "Sair" if user is logged in;
+          if(isset($_SESSION['id'])){ ?>
+            <a href="<?php echo DIRPAGE.'logout'?>">Sair</a>
+          <?php } ?>
         </ul>
       </div>
       <div class="modal-footer">

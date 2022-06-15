@@ -19,7 +19,7 @@
             </div>                
             <span id="error-msg"></span>
             <div class="d-grid mb-2">
-              <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" name="submit">Logar</button>
+              <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" name="submit" value="SignUp">Logar</button>
             </div>
             <a class="d-block text-center mt-2 small" href="cadastro.php">Ainda não possui uma conta? Cadastre-se</a>
           </form>
