@@ -3,21 +3,53 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+ 
   }
+
+  /*Config acessibility*/
+  :root{
+    --body-bg:#fafafa;
+    --body-color:#555;
+    --link-color:#222;
+    --link-color-hover:#ec5840;
+  }
+  .dark-mode:root{
+    --body-bg:#212529;
+    --body-color:#899095;
+    --link-color:#dee2e6;
+    --link-color-hover:#3cc368;
+  }
+
+  .dark-mode{
+    line-height: 30px;
+  }
+
+ 
   body{
     font-family: 'Opens Sans', sans-serif;
+    background-color: var(--body-bg);
+    color:var(--body-color);
+  
   }
   /* BARRA LATERAL*/ 
   .modal {
       width: 300px;
+      background-color: var(--body-color);
+  
+    }
+    .modal-header{
+
+      align-self: center;
+   
     }
   
     .modal-content {
       width: 300px;
+      background-color: var(--body-bg);
     }
   
     .list-group-item:hover {
-      background-color: rgba(132, 154, 230, 0.164) !important;
+      background-color: var(--body-color);
     }
   
     /* CARDS*/ 
@@ -64,7 +96,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ecf0f1;
+  
   }
   .content{
     border-radius: 15px;
@@ -114,15 +146,24 @@
     width: 150px;
     align-self: center;
     border-width: 0;
+
+
   }
   .btn-primary{
     background-color: transparent;
     border:1px solid #fff;
+    
   }
 
   .btn-second{
     background-color: #5893af;
     border: 1px solid #5893af;
+    
+  }
+ 
+  .btn.link{
+    background-color: #f57207;
+
   }
   .btn-second:hover{
     background-color: #fff;
