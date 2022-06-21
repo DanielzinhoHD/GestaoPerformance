@@ -55,7 +55,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Fechar Menu</button>
-          <a href="login.html" role="button" class="btn btn-second"> Deslogar</a>
+          <a href="<?php echo DIRPAGE.'logout/'?>" role="button" class="btn btn-second"> Deslogar</a>
          
         </div>
       </div>
@@ -125,4 +125,5 @@
 
   <span class="material-icons"> contrast</span>
   </div>
+  
 <?php include_once DIRJS.'home.php';?>

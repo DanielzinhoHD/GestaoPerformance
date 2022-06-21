@@ -23,7 +23,6 @@ class ClassRoutes{
       "login"=>"ControllerLogin",
       'logout'=>"ControllerLogout",
       'registro'=>"ControllerRegistro"
-
     );
 
 

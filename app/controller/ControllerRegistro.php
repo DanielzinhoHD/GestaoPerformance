@@ -24,7 +24,6 @@ Class ControllerRegistro extends ClassRegistro{
             else{
                 echo 'Você já está logado ';
             }
-            
         }
         else
         {
