@@ -20,8 +20,12 @@ class ClassRoutes{
       "home"=>"ControllerHome",
       "sitemap"=>"ControllerSitemap",
       "cadastro"=>"ControllerCadastro",
-      "login"=>"ControllerLogin"
+      "login"=>"ControllerLogin",
+      'logout'=>"ControllerLogout",
+      'registro'=>"ControllerRegistro"
+
     );
+
 
     if(array_key_exists($i, $this->Rota)){
 

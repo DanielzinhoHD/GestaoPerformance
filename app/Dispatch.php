@@ -29,6 +29,10 @@ class Dispatch extends ClassRoutes{
         $RotaController=$this->getRota();
         $NameS="App\\Controller\\{$RotaController}";
         $this->Obj=new $NameS;
+
+        if(isset($this->parseUrl()[1])){
+            self::addMethod();
+        }
     }
 
 
