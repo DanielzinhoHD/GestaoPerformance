@@ -9,5 +9,7 @@ use Src\Classes\ClassRoutes;
 
 // $_SESSION['userId'];
 
+session_start();
+
 $dispatch = new App\Dispatch();
 
