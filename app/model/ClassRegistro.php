@@ -26,7 +26,7 @@ class ClassRegistro extends ClassConexao {
       $this->stmt = $this->conexaoDB()->prepare($sql);
       $this->stmt->execute(array($email));
       $stmt = null;
-      return'Este email já está sendo utilizado';     
+      return 'Este email já está sendo utilizado';     
       
     }
     protected function createUser($name, $email, $password){

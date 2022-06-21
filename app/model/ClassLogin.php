@@ -28,7 +28,7 @@ class ClassLogin extends ClassConexao{
   
   // Verifica se usuário existe;
     if($userEmail === false){
-      echo '<p class=error-msg>Email não existe!</p>';
+      echo 'Email não existe!';
       exit();
     }else{
       $hashedPw = $userEmail['senha'];
@@ -36,7 +36,7 @@ class ClassLogin extends ClassConexao{
     
     // Verifica se as senhas são iguais;
       if($checkedPw === false){
-        echo '<p class=error-msg>Senha errada!</p>';
+        echo 'Senha errada!';
         exit();
       }else if($checkedPw === true){
         // session_start();

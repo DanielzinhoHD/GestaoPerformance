@@ -12,11 +12,12 @@
           
           <form class="form">
     
-                <input type="email" placeholder="Email" name="email">
-              <input type="password" placeholder="Senha" name="pw">
-          <button type="submit" role="button" class="btn btn-second" name="submit"> Acesse</button>
+            <input type="email" placeholder="Email" name="email">     
+            <input type="password" placeholder="Senha" name="pw">
+            <p id="error-msg"></p>
+            <button type="submit" role="button" class="btn btn-second" name="submit" value="Submit"> Acesse</button>
         
-        </form>
+          </form>
     
         <label class= "dark-mode" for="switch">
         
@@ -28,5 +29,6 @@
       </div>
     
   </div>
+<?php include_once DIRJS.'login.php';?>
 <?php include_once DIRJS.'home.php';?>
 
