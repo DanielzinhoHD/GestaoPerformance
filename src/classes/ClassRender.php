@@ -8,7 +8,6 @@ class classRender{
   private $Title;
   private $Description;
   private $Keywords;
-  private $Script;
 
   public function getDir(){return $this->Dir;}
   public function setDir($Dir){$this->Dir = $Dir;}
@@ -21,9 +20,6 @@ class classRender{
 
   public function getKeywords(){return $this->Keywords;}
   public function setKeywords($Keywords){$this->Keywords = $Keywords;}
-
-  public function getScript(){return $this->Script;}
-  public function setScript($Script){$this->Script = $Script;}
 
 // Renderiza Layout;
   public function renderLayout()
@@ -63,13 +59,4 @@ public function addFooter()
     };
   }
 
-// Add o javascript;
-  public function addScript()
-  {
-    if(file_exists(DIRREQ."app/view/{$this->getScript()}/script.php")){
-      include(DIRREQ."app/view/{$this->getScript()}/script.php");
-    };
-  }
 }
-
-

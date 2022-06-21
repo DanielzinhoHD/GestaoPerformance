@@ -1,4 +1,5 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,12 +7,7 @@
   <meta name="description" content="<?php echo $this->getDescription();?>">
   <meta name="keywords" content="<?php echo $this->getKeywords();?>">
   <title><?php echo $this->getTitle();?></title>
-  <!-- importing jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-    crossorigin="anonymous">
-  </script> 
-  <link rel="stylesheet" href="<?php echo DIRCSS.'default.css'?>">
+  <meta rel="stylesheet" href="<?php echo DIRCSS.'layout.css'?>">
 
   <?php echo $this->addHead();?>
 </head>
@@ -28,6 +24,5 @@
     <?php echo $this->addFooter();?>
   </footer>
 
-  <?php echo $this->addScript();?>
 </body>
 </html>
