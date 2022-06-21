@@ -42,21 +42,25 @@ class ControllerLogin extends ClassLogin{
   {
     $error_msg = '<p class="error-msg">Você precisa preencher todos os campos!<p>';
 
+    // $vars = array($_POST['email'], $_POST['pw'], $_POST['submit']);
+    // foreach($vars as $key => $value){
+    //   if(!isset($vars[$key])){
+    //     echo $value;
+    //   }
+    // }
+
     if(isset($_POST['email'])){
       $this->email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
     }else{
       return $error_msg;
+      exit();
     }
 
     if(isset($_POST['pw'])){
       $this->pw=filter_input(INPUT_POST, 'pw', FILTER_SANITIZE_SPECIAL_CHARS);
     }else{
       return $error_msg;
-    }
-
-    if(isset($_POST['submit'])){
-      $submit = $_POST['submit'];
-      $this->isSubmitted=filter_input(INPUT_POST, 'submit', FILTER_SANITIZE_SPECIAL_CHARS);
+      exit();
     }
   }
 
