@@ -76,7 +76,7 @@
 
           <p class="card-text"> Área destinada para o preenchimento das atividades diárias feitas pela equipe.
           </p>
-          <a href="#" class="btn btn-success btn-sm"> PREENCHER</a>
+          <a href="<?php echo DIRPAGE.'formulario'?>" class="btn btn-success btn-sm"> PREENCHER</a>
          
           <div class="card-footer">
             <span class="material-icons">

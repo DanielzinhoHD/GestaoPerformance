@@ -10,13 +10,14 @@
         </div>
         <div class="second-column">
          
-            <h2 class="title title-second"> Criar uma conta</h2>
-            <p class="description"> Uso do Email pessoal para registro</p>
-            <form class="form">
+          <h2 class="title title-second"> Criar uma conta</h2>
+          <p class="description"> Uso do Email pessoal para registro</p>
+          
+          <form class="form">
             <input type="text" placeholder="Nome" >
-                 <input type="email" placeholder="Email">
-               <input type="password" placeholder="Senha">
-               <a class="btn btn-second" href="#" role="button"> Cadastrar</a>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Senha">
+            <a class="btn btn-second" href="#" role="button"> Cadastrar</a>
           
          </form>
         
