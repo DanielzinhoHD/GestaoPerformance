@@ -1,4 +1,4 @@
-/*funcionalidade dark mode teste*/
+/*funcionalidade dark mode*/
 
 const $html = document.querySelector('html')
 const $checkbox= document.querySelector('#switch')
