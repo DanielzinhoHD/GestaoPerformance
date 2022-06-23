@@ -92,7 +92,7 @@
       </div>
       <div class="card-body">
         <p class="card-text"> Opção para ao acesso aos relatórios mensais.</p>
-        <a href="#" target="_blank" class="btn btn-secondary"> ACESSE</a>
+        <a href="relatorios" target="_blank" class="btn btn-secondary"> ACESSE</a>
       </div>
       <div class="card-footer"> <span class="material-icons">
         feed </span> </div>
@@ -116,7 +116,7 @@
     </div>
     <div class="card-body">
       <p class="card-text"> Opção para visualizar os gráficos mensais.</p>
-      <a href="#" target="_blank" class="btn btn-secondary"> ACESSE</a>
+      <a href="graficos" target="_blank" class="btn btn-secondary"> ACESSE</a>
     </div>
     <div class="card-footer"> <span class="material-icons">
       equalizer</span></div>

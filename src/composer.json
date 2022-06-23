@@ -1,6 +1,8 @@
 {
     "name": "gestaoperformance/mvc",
-    "require": {},
+    "require": {
+        "cossou/jasperphp": "^2.8"
+    },
     "autoload": {
         "psr-4": {
             "App\\":"../app/",
