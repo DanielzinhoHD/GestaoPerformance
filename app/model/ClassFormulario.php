@@ -67,4 +67,58 @@ class ClassFormulario extends ClassConexao{
 
     return json_encode($projetos);
   }
+
+  // Função para cadastro;
+  protected function cadastrarFormulario(
+    $userId, 
+    $cliente, 
+    $equipe, 
+    $date, 
+    $infra_estrutura, 
+    $infra_estrutura_num, 
+    $cabeamento, 
+    $cabeamento_num, 
+    $conectorizacao, 
+    $conectorizacao_num, 
+    $tempo_conclusao, 
+    $projeto, 
+    $obs
+  )
+  {
+    $sql = "INSERT INTO cadastro (
+      Usuarios_idUsuarios,
+      infraEstrutura_idinfraEstrutura,
+      quantidade_InfraEstrutura,
+      Projeto_idProjeto,
+      Conector_idConector,
+      quantidade_Conector,
+      Cabeamento_idCabeamento,
+      quantidade_Cabeamento,
+      Clientes_idClientes,
+      equipe,
+      data_cadastro,
+      tempo_conclusao,
+      observacoes
+      ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $this->stmt=$this->conexaoDB()->prepare($sql);
+
+    $this->stmt->execute(array(
+      $userId,
+      $infra_estrutura,
+      $infra_estrutura_num,
+      $projeto,
+      $conectorizacao,
+      $conectorizacao_num,
+      $cabeamento,
+      $cabeamento_num,
+      $cliente,
+      $equipe,
+      $date,
+      $tempo_conclusao,
+      $obs
+    ));        
+
+    $this->stmt = null;
+    exit();
+  }
 }

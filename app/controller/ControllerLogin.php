@@ -40,8 +40,6 @@ class ControllerLogin extends ClassLogin{
 
   public function receberVariaveis()
   {
-    $error_msg = '<p class="error-msg">Você precisa preencher todos os campos!<p>';
-
     // $vars = array($_POST['email'], $_POST['pw'], $_POST['submit']);
     // foreach($vars as $key => $value){
     //   if(!isset($vars[$key])){
@@ -49,25 +47,29 @@ class ControllerLogin extends ClassLogin{
     //   }
     // }
 
-    if(isset($_POST['email'])){
+    if($_POST['email'] !== ''){
       $this->email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
     }else{
-      return $error_msg;
-      exit();
+      return false;
     }
 
-    if(isset($_POST['pw'])){
+    if($_POST['pw'] !== ''){
       $this->pw=filter_input(INPUT_POST, 'pw', FILTER_SANITIZE_SPECIAL_CHARS);
     }else{
-      return $error_msg;
-      exit();
+      return false;
     }
+    return true;
   }
 
   public function login()
   {
-    $this->receberVariaveis();
-
-    parent::loginUser($this->email, $this->pw);
+    if($this->receberVariaveis() == false){
+      $error_msg = 'Você precisa preencher todos os campos!';
+      
+      echo $error_msg;
+      exit();
+    }else{
+      parent::loginUser($this->email, $this->pw);
+    };
   }
 }

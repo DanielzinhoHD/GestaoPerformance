@@ -32,7 +32,7 @@ Class ControllerRegistro extends ClassRegistro{
                 $Render->setDescription("Página de Cadastro");
                 $Render->setKeywords("cabeamento,smartfast,performance");
                 $Render->setTitle("Smartfast Cadastro");
-                $Render->setDir("Cadastro/");
+                $Render->setDir("cadastro/");
                 $Render->renderLayout(); 
             }
         }

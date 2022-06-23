@@ -111,9 +111,10 @@ $usuario = new ControllerFormulario();
         <label>Observações (não obrigatório)</label>
         <input name="obs" type="text" class="form-control" placeholder=" Insira as observações" />
       </div>
+      <p id="error-msg"></p>
       <div style="text-align: right">
         <button type="submit" name="submit" id="botão" class="btn btn-sm">
-          Nova atividade
+          Cadastrar
         </button>
         <button type="button" class="btn btn-info btn-sm" onclick="location.href='<?php echo DIRPAGE?>'">Voltar</button>
       </div>
