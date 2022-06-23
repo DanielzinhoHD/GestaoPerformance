@@ -60,11 +60,11 @@ class ControllerRelatorios{
     {
         return [
             'driver'   => 'mysql',
-            'host'     => 'us-cdbr-east-04.cleardb.com',
-            'port'     => '3306',
-            'username' => 'b8dbcbf0ac9c54',
-            'password' => '599a8d61',
-            'database' => 'heroku_50fde6b771ec9ae'
+            'host'     => 
+            'port'     => 
+            'username' => 
+            'password' => 
+            'database' => 
         ];
     }
  
