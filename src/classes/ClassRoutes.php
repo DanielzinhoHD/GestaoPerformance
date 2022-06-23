@@ -24,7 +24,8 @@ class ClassRoutes{
       'logout'=>"ControllerLogout",
       'registro'=>"ControllerRegistro",
       'formulario'=>"ControllerFormulario",
-      'projetos'=>"ControllerProjetos"
+      'projetos'=>"ControllerProjetos",
+      'addprojeto'=>"ControllerAddProjeto"
     );
 
 

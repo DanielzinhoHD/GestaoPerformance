@@ -1,12 +1,3 @@
-<?php 
-    session_start(); //Inicia sessão
-    if(!isset($_SESSION['id'])){
-      header("Location: login.php");  //Leva o usuário para tela de login caso não esteja logado
-    }
-    include_once 'headerDeb.php';
-?>
-</head>
-<a href="index.php"><img src="./img/logo1.png"></a>
 <div class="container-projeto" style="margin-top:100px">
     <div class="row">
         <div class="col-sm-6">
@@ -14,7 +5,7 @@
             <div class="card-body">
               <h5 class="card-title"> Adicionar Projeto</h5>
               <p class="card-text"> Opção para adicionar novos projetos</p>
-              <a href="adicionar_projeto.php" class="btn btn-info"> Cadastrar Projeto</a>
+              <a href="<?php echo DIRPAGE.'addprojeto'?>" class="btn btn-info"> Cadastrar Projeto</a>
             </div>
           </div>
         </div>
@@ -55,6 +46,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
 </script>
-</body>
-
-</html>

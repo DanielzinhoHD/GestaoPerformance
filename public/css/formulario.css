@@ -52,3 +52,7 @@ ul.logos{
     font-weight: bold;
     align-items:center;
 }
+
+.btn .btn-info{
+    color: white;
+}

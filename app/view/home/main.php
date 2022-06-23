@@ -48,7 +48,7 @@
                 grid_view </span> RELATÓRIOS</li>
             <li class="list-group-item"> <span class="material-icons">
                 description
-              </span>´PROJETOS </li>
+              </span>PROJETOS </li>
             
           </ul>
          
@@ -104,7 +104,7 @@
     
       <div class="card-body">
         <p class="card-text"> Opção para listar, adicionar,  editar e excluir projetos.</p>
-        <a href="<?php echo DIRPAGE.''?>" target="_blank" class="btn btn-secondary"> ACESSE</a>
+        <a href="<?php echo DIRPAGE.'projetos'?>" class="btn btn-secondary"> ACESSE</a>
       </div>
       <div class="card-footer"> <span class="material-icons">
         plumbing</span></div>

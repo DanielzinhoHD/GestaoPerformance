@@ -16,7 +16,7 @@ class ClassLogin extends ClassConexao{
     $this->stmt = $this->conexaoDB()->prepare($sql);
     $this->stmt->execute(array($email));
     $result = $this->stmt->fetch(\PDO::FETCH_ASSOC);
-    $stmt = null;
+    $this->stmt = null;
     
     return $result;
   }

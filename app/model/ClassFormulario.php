@@ -15,7 +15,7 @@ class ClassFormulario extends ClassConexao{
     $this->stmt = $this->conexaoDB()->prepare($sql);
     $this->stmt->execute();
     $clients = $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
-    $stmt = null;
+    $this->stmt = null;
     
     return $clients;
   }
@@ -27,7 +27,7 @@ class ClassFormulario extends ClassConexao{
     $this->stmt = $this->conexaoDB()->prepare($sql);
     $this->stmt->execute();
     $infraEstrutura = $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
-    $stmt = null;
+    $this->stmt = null;
     
     return $infraEstrutura;
   }
@@ -39,7 +39,7 @@ class ClassFormulario extends ClassConexao{
     $this->stmt = $this->conexaoDB()->prepare($sql);
     $this->stmt->execute();
     $cabeamento = $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
-    $stmt = null;
+    $this->stmt = null;
 
     return $cabeamento;
   }
@@ -51,7 +51,7 @@ class ClassFormulario extends ClassConexao{
     $this->stmt = $this->conexaoDB()->prepare($sql);
     $this->stmt->execute();
     $conector = $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
-    $stmt = null;
+    $this->stmt = null;
 
     return $conector;
   }
@@ -63,7 +63,7 @@ class ClassFormulario extends ClassConexao{
     $this->stmt = $this->conexaoDB()->prepare($sql);
     $this->stmt->execute(array($userId, $clientId));
     $projetos = $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
-    $stmt = null;
+    $this->stmt = null;
 
     return json_encode($projetos);
   }

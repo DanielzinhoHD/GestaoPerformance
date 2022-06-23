@@ -25,7 +25,7 @@ class ClassRegistro extends ClassConexao {
       
       $this->stmt = $this->conexaoDB()->prepare($sql);
       $this->stmt->execute(array($email));
-      $stmt = null;
+      $this->stmt = null;
       return 'Este email já está sendo utilizado';     
       
     }
@@ -35,9 +35,7 @@ class ClassRegistro extends ClassConexao {
        
         $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
         $this->stmt->execute(array($name,$email,$hashedPwd));        
-        $stmt = null;       
+        $this->stmt = null;       
         exit();
-        
     }
-    
 }
