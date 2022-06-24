@@ -28,6 +28,6 @@
     <?php echo $this->addFooter();?>
   </footer>
 
-  <?php echo $this->addScript();?>
+  <?php echo $this->addDarkMode();?>
 </body>
 </html>

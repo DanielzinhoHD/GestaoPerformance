@@ -64,10 +64,10 @@ public function addFooter()
   }
 
 // Add o javascript;
-  public function addScript()
+  public function addDarkMode()
   {
-    if(file_exists(DIRREQ."app/view/{$this->getScript()}/script.php")){
-      include(DIRREQ."app/view/{$this->getScript()}/script.php");
+    if(file_exists(DIRJS."darkmode.php")){
+      include(DIRJS."darkmode.php");
     };
   }
 }
