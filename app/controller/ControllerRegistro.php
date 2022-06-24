@@ -19,7 +19,6 @@ Class ControllerRegistro extends ClassRegistro{
             if(file_exists(DIRREQ.'App\Controller\ControllerHome.php')){
                 header('location: '.DIRPAGE);
                 exit();
-                
             }
             else{
                 echo 'Você já está logado ';
@@ -29,34 +28,55 @@ Class ControllerRegistro extends ClassRegistro{
         {
             if(!isset($isSubmitted)){
                 $Render = new classRender;
-                $Render->setDescription("Página de Cadastro");
+                $Render->setDescription("Página de Registro");
                 $Render->setKeywords("cabeamento,smartfast,performance");
-                $Render->setTitle("Smartfast Cadastro");
-                $Render->setDir("cadastro/");
+                $Render->setTitle("Smartfast Registro");
+                $Render->setDir("registro/");
                 $Render->renderLayout(); 
             }
         }
     }
     public function ReceberVariaveis()
     {
-        if(isset($_POST['nome'])){
+        if($_POST['nome'] !== ''){
             $this->nome=filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+        }else{
+            return false;
         }
-        if(isset($_POST['email'])){
+
+        if($_POST['email'] !== ''){
             $this->email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+        }else{
+            return false;
         }
-        if(isset($_POST['senha'])){
-            $this->senha=filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if($_POST['senha'] !== ''){
+            $this->pw=filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+        }else{
+            return false;
         }
-        if(isset($_POST['Confirmarsenha'])){
-            $this->Confirmarsenha=filter_input(INPUT_POST, 'Confirmarsenha', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if($_POST['Confirmarsenha'] !== ''){
+            $this->pw2=filter_input(INPUT_POST, 'Confirmarsenha', FILTER_SANITIZE_SPECIAL_CHARS);
+        }else{
+            return false;
         }
+
+        return true;
     }
     public function Cadastrar()
     {
-        $this->ReceberVariaveis();
+        if($this->ReceberVariaveis() == false){
+            $msg = 'Você precisa preencher todos os inputs!';
 
-        parent::pwdMatch($this->pw,$this->pw2);
+            echo $msg;
+            exit();
+        }
+
+        if(!parent::pwdMatch($this->pw,$this->pw2)){
+            echo 'As senhas devem ser iguais!';
+            exit();
+        }
 
         parent::createUser($this->nome,$this->email,$this->pw);
     }

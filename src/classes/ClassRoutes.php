@@ -26,8 +26,10 @@ class ClassRoutes{
       'formulario'=>"ControllerFormulario",
       'projetos'=>"ControllerProjetos",
       'addprojeto'=>"ControllerAddProjeto",
+      'addcliente'=>"ControllerAddCliente",
       'graficos'=>"ControllerGraficos",
-      'relatorios'=>"ControllerRelatorios"
+      'relatorios'=>"ControllerRelatorios",
+      'listarProjetos'=>"ControllerListarProjeto"
     );
 
 

@@ -1,5 +1,6 @@
 <script>
     const DIRPAGE='<?php echo DIRPAGE ?>';
+    
     $('form').submit((e)=>{
         e.preventDefault();
 
@@ -11,14 +12,12 @@
         
         const pw2 = $('input[name="Confirmarsenha"]').val();
 
-        const submit = $('button[name="submit"]').val();
-
         $.post(DIRPAGE+'registro/Cadastrar',{
            nome:name,
            email:email,
            senha:pw,
            Confirmarsenha:pw2,
-           submit:submit
+           submit:true
         }).done((erro)=>{
             if(!erro){
                 location.href=DIRPAGE;

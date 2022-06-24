@@ -9,13 +9,14 @@ class ClassRegistro extends ClassConexao {
 
     protected function pwdMatch($password, $password2){
         if($password !== $password2){
-            return 'As senhas são diferentes';
+            return false;
         }
-      
+        return true;
     }
+    
     protected function invalidEmail($email){
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            return 'Email inválido';
+            echo 'Email inválido';
         }
     }
 
@@ -26,9 +27,10 @@ class ClassRegistro extends ClassConexao {
       $this->stmt = $this->conexaoDB()->prepare($sql);
       $this->stmt->execute(array($email));
       $this->stmt = null;
-      return 'Este email já está sendo utilizado';     
+      echo 'Este email já está sendo utilizado';     
       
     }
+
     protected function createUser($name, $email, $password){
         $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?);";
         $this->stmt = $this->conexaoDB()->prepare($sql);       

@@ -1,10 +1,10 @@
 :root {
     --cor-principal: rgb(73, 113, 149);
     --cor-secundaria: rgb(222, 228, 235);
+    --body-color:#555;
 }
 /*CSS Menu*/
 nav {
-    max-width: 350px;
     width: 100%;
     background-color: aquamarine;
    
@@ -33,6 +33,11 @@ nav ul li a:hover {
     background-color: var(--cor-secundaria);
     color: var(--cor-principal);
 }
+
+.modal-content{
+    width: 350px;
+}
+
 ul.logos{
     list-style: none;
     display:flex;
@@ -55,4 +60,8 @@ ul.logos{
 
 .btn .btn-info{
     color: white;
+}
+
+.list-group-item:hover {
+    background-color: var(--body-color);
 }

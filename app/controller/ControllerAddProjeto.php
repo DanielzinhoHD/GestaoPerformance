@@ -20,12 +20,12 @@ class ControllerAddProjeto extends ClassAddProjeto{
     }
 
     if(!isset($_SESSION['id'])){
-      if(file_exists(DIRREQ."app/controller/ControllerHome.php")){
+      if(file_exists(DIRREQ."app/controller/ControllerLogin.php")){
       // Redireciona usuário pra tela inicial se já estiver logado;
-        header("Location: ".DIRPAGE);
+        header("Location: ".DIRPAGE.'login');
         exit();
       }else{
-        echo 'Você já está logado!';
+        echo 'Você não está logado!';
       }
     }else{
       if(!isset($isSubmit)){

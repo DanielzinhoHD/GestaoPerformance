@@ -34,8 +34,8 @@ class classRender{
 // Add características expecíficas no main;
   public function addHeader()
   {
-    if(file_exists(DIRREQ."app/view/{$this->getDir()}/header.php")){
-      include(DIRREQ."app/view/{$this->getDir()}/header.php");
+    if(file_exists(DIRREQ."app/view/navbar.php")){
+      include(DIRREQ."app/view/navbar.php");
     };
   }
 
