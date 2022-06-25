@@ -35,7 +35,7 @@
 </script>
 
 <?php 
-  include_once DIRJS.'home.php';
+  include_once DIRJS.'darkmode.php';
   include_once DIRJS.'registrar.php';  
 ?>
 
